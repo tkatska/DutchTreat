@@ -1,0 +1,13 @@
+﻿
+<div class="row">
+
+    <div class="product-info col-md-4 we" *ngFor="let p of products">
+        <img src="/img/{{p.artId}}.jpg" class="img-fluid" [alt]="p.title" />
+        <h3 class="product-name">{{p.category}}-{{p.size}}</h3>
+            <div><strong>Price:</strong>{{p.price|currency:"GBP":true}}</div>
+            <div><strong>Artist:</strong> {{p.artist}}</div>
+            <div><strong>Title:</strong> {{p.title}}</div>
+            <div><strong>Description:</strong> {{p.artDescription}}</div>
+        <button id="buyButton" class="btn btn-success btn-sm fa-pull-right" (click) ="addProduct(p)">Buy</button>
+    </div>
+</div>
